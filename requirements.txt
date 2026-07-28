@@ -1,0 +1,22 @@
+# Smart Terminal AI Search - Dependências
+# Python 3.12+ necessário
+
+# Navegação web headless
+playwright>=1.40.0
+
+# Parsing e extração de HTML
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+requests>=2.31.0
+
+# Interface rica no terminal
+rich>=13.0.0
+prompt-toolkit>=3.0.40
+colorama>=0.4.6
+
+# Processamento de texto
+markdown>=3.5.0
+
+# Utilitários
+python-dateutil>=2.8.0
+ddgs>=7.0

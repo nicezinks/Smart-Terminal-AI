@@ -1,0 +1,13 @@
+{
+    "theme": "default",
+    "language": "pt-BR",
+    "max_search_time": 60,
+    "max_suggested_links": 5,
+    "cache_ttl_hours": 24,
+    "detailed_mode": true,
+    "silent_mode": false,
+    "animations": true,
+    "auto_update": false,
+    "save_history": true,
+    "log_level": "INFO"
+}
