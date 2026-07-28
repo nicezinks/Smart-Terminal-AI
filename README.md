@@ -145,8 +145,6 @@ Contém testes automatizados.
 ```text
 Smart-Terminal-AI/
 │
-├── assets/
-├── cache/
 ├── core/
 │   ├── ai.py
 │   ├── browser.py
@@ -162,9 +160,6 @@ Smart-Terminal-AI/
 │   ├── trusted_sources.py
 │   └── utils.py
 │
-├── data/
-├── docs/
-│   └── usage.md
 ├── logs/
 ├── plugins/
 ├── terminal/
