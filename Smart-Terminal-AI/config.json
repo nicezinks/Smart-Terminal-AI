@@ -1,0 +1,58 @@
+{
+    "app_name": "Smart Terminal AI Search",
+    "version": "1.0.0",
+    "author": "Python dev",
+    "paths": {
+        "logs": "logs",
+        "cache": "cache",
+        "data": "data",
+        "assets": "assets",
+        "plugins": "plugins"
+    },
+    "browser": {
+        "headless": true,
+        "timeout": 15000,
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "viewport": {"width": 1920, "height": 1080},
+        "locale": "pt-BR"
+    },
+    "search": {
+        "engine": "google",
+        "max_results": 10,
+        "max_pages_to_visit": 5,
+        "delay_between_requests": 0.5
+    },
+    "ai": {
+        "model": "local",
+        "max_tokens": 2048,
+        "temperature": 0.7,
+        "language": "pt-BR"
+    },
+    "google_search": {
+        "api_key": "",
+        "cx": "",
+        "enabled": false
+    },
+    "llm": {
+        "enabled": true,
+        "api_key": "",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "meta-llama/llama-3.1-8b-instruct:free",
+        "timeout": 30,
+        "max_tokens": 2048,
+        "temperature": 0.7
+    },
+    "settings": {
+        "theme": "default",
+        "language": "pt-BR",
+        "max_search_time": 60,
+        "max_suggested_links": 10,
+        "cache_ttl_hours": 24,
+        "detailed_mode": true,
+        "silent_mode": false,
+        "animations": true,
+        "auto_update": false,
+        "save_history": true,
+        "log_level": "INFO"
+    }
+}
