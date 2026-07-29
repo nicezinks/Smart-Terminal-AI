@@ -62,10 +62,7 @@ class SiteAnalyzer:
 
    
     def _generate_summary(self, content: str, url: str) -> str:
-        """
-        Usa a Pollinations AI para gerar um resumo inteligente e completo
-        do conteúdo extraído, explicando o que o site quer transmitir.
-        """
+    
         # Trunca o conteúdo para não exceder limites da API
         truncated = truncate_text(content, 8000)
 
@@ -147,15 +144,15 @@ class SiteAnalyzer:
         title = lines[0] if lines else "Sem título"
         paragraphs = [l for l in lines[1:] if len(l.strip()) > 50][:5]
 
-        summary = f"""## 📄 Análise do Site: {url}
+        summary = f"""##  Análise do Site: {url}
 
-### 📝 Título/Resumo Rápido
+###  Título/Resumo Rápido
 {title}
 
-### 🎯 O que o site transmite
+###  O que o site transmite
 {" ".join(paragraphs)}
 
-### ⚠️ Nota
+###  Nota
 O resumo inteligente não pôde ser gerado (serviço temporariamente indisponível).
 Acima está o conteúdo bruto extraído do site.
 """
@@ -177,7 +174,7 @@ Acima está o conteúdo bruto extraído do site.
                 "url": url,
                 "title": "",
                 "content_length": 0,
-                "summary": "❌ URL inválida. Por favor, forneça um link completo (ex: https://exemplo.com)",
+                "summary": " URL inválida. Por favor, forneça um link completo (ex: https://exemplo.com)",
                 "success": False
             }
 
@@ -189,7 +186,7 @@ Acima está o conteúdo bruto extraído do site.
                 "title": "",
                 "content_length": 0,
                 "summary": (
-                    f"❌ Não foi possível extrair o conteúdo de: {url}\n\n"
+                    f" Não foi possível extrair o conteúdo de: {url}\n\n"
                     f"Possíveis causas:
 "
                     f"• O site bloqueia bots ou requer JavaScript\n"
@@ -226,9 +223,9 @@ Acima está o conteúdo bruto extraído do site.
         result = self.analyze(url)
 
         if result["success"]:
-            print(f"✅ Análise concluída!")
-            print(f"📄 Título: {result['title']}")
-            print(f"📊 Caracteres extraídos: {result['content_length']}")
+            print(f" Análise concluída!")
+            print(f" Título: {result['title']}")
+            print(f" Caracteres extraídos: {result['content_length']}")
             print(f"\n{'─' * 70}")
             print(result["summary"])
             print(f"{'─' * 70}\n")
