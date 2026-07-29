@@ -8,8 +8,7 @@ from colorama import Fore, Back, Style, init
 init(autoreset=True)
 
 class Colors:
-    """Paleta de cores do Smart Terminal AI Search."""
-
+   
     # Cores principais
     PRIMARY = Fore.CYAN
     SECONDARY = Fore.MAGENTA
