@@ -22,13 +22,7 @@ class SiteAnalyzer:
 
     
     def _fetch_content(self, url: str) -> Optional[str]:
-        """
-        Usa a Jina AI Reader para extrair o texto limpo de uma URL.
-
-        A Jina AI Reader é uma API pública e gratuita que converte
-        qualquer página web em texto limpo e bem formatado.
-        Documentação: https://jina.ai/reader
-        """
+     
         if not is_valid_url(url):
             self.logger.error(f"URL inválida: {url}")
             return None
