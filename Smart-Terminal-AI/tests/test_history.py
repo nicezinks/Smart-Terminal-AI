@@ -9,7 +9,7 @@ import pytest
 from core.history import History
 
 class TestHistory:
-    """Testes do sistema de histórico."""
+   
 
     def test_history_add(self):
         """Deve adicionar entrada ao histórico."""
@@ -19,7 +19,7 @@ class TestHistory:
             assert len(hist.get_all()) == 1
 
     def test_history_recent(self):
-        """Deve retornar entradas recentes."""
+       
         with tempfile.TemporaryDirectory() as tmpdir:
             hist = History(history_path=f"{tmpdir}/history.json")
             for i in range(5):
@@ -28,7 +28,7 @@ class TestHistory:
             assert len(recent) == 3
 
     def test_history_search(self):
-        """Deve buscar por palavra-chave."""
+    
         with tempfile.TemporaryDirectory() as tmpdir:
             hist = History(history_path=f"{tmpdir}/history.json")
             hist.add("python programming", "resposta", [], 1.0, 1)
@@ -38,7 +38,7 @@ class TestHistory:
             assert results[0]["query"] == "python programming"
 
     def test_history_stats(self):
-        """Deve calcular estatísticas corretamente."""
+      
         with tempfile.TemporaryDirectory() as tmpdir:
             hist = History(history_path=f"{tmpdir}/history.json")
             hist.add("q1", "r1", [], 2.0, 1)
