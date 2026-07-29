@@ -1,4 +1,4 @@
-"""Cliente LLM gratuito via Pollinations AI."""
+
 import json
 import urllib.request
 from typing import List, Any
