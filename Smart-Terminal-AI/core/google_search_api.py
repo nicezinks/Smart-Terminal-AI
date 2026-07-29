@@ -1,17 +1,4 @@
-"""
-Cliente oficial da API Google Custom Search JSON.
-100% legítimo — usa a API pública do Google.
 
-Como obter credenciais (gratuito):
-1. Vá em https://console.cloud.google.com/
-2. Crie um projeto → ative "Custom Search API"
-3. Gere uma API Key em "Credenciais"
-4. Vá em https://cse.google.com/cse/all e crie um Search Engine
-5. Pegue o "Search Engine ID" (cx)
-6. Coloque ambos no config.json
-
-Limite gratuito: 100 consultas/dia.
-"""
 
 import json
 import urllib.request
