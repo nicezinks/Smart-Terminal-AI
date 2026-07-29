@@ -1,6 +1,5 @@
 """
 Definições de cores e estilos para o terminal.
-Utiliza Colorama para compatibilidade cross-platform.
 """
 
 from colorama import Fore, Back, Style, init
