@@ -1,5 +1,4 @@
-# Smart Terminal AI Search - Dependências
-# Python 3.12+ necessário
+#  Dependências
 
 # Navegação web headless
 playwright>=1.40.0
