@@ -173,14 +173,3 @@ Este projeto acompanha um arquivo **LICENSE**.
 Consulte-o para conhecer todos os termos de utilização, distribuição e modificação do software.
 
 ---
-
-# 👨‍💻 Desenvolvedor
-
-Projeto desenvolvido por um desenvolvedor independente com foco em Python, organização de código, arquitetura modular e projetos Open Source.
-
-Caso queira contribuir com melhorias, correções ou novas funcionalidades, fique à vontade para abrir uma **Issue** ou enviar um **Pull Request**
-Desenvolvedor: **python_dev**
-
----
-
-**⭐ Se este projeto foi útil para você, considere deixar uma estrela no repositório.**
