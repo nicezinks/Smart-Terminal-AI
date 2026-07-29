@@ -1,13 +1,9 @@
 # 🤖 Smart Terminal AI
 
-<p align="center">
-
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-success?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-See%20LICENSE-orange?style=for-the-badge)
-
-</p>
 
 ---
 
@@ -47,6 +43,7 @@ Ele **não foi criado** para:
 - Testes automatizados
 - Organização por módulos
 - Estrutura preparada para expansão
+- 🆕 **Análise inteligente de sites** (site_analyzer.py)
 
 ---
 
@@ -118,6 +115,23 @@ Gerencia fontes consideradas confiáveis.
 
 Funções auxiliares utilizadas pelo restante do projeto.
 
+### 🆕 site_analyzer.py
+
+**NOVO!** Analisador inteligente de sites. Recebe um link, extrai o conteúdo usando a API pública Jina AI Reader e gera um resumo completo do que o site quer transmitir ao leitor, usando a Pollinations AI.
+
+**Como usar:**
+```bash
+python core/site_analyzer.py https://exemplo.com
+```
+
+Ou via import:
+```python
+from core.site_analyzer import SiteAnalyzer
+analyzer = SiteAnalyzer()
+resultado = analyzer.analyze("https://exemplo.com")
+print(resultado["summary"])
+```
+
 ---
 
 ## terminal/
@@ -156,6 +170,7 @@ Smart-Terminal-AI/
 │   ├── logger.py
 │   ├── scraper.py
 │   ├── search.py
+│   ├── site_analyzer.py    
 │   ├── summarizer.py
 │   ├── trusted_sources.py
 │   └── utils.py
@@ -175,8 +190,6 @@ Smart-Terminal-AI/
 ├── cache.json
 ├── history.json
 ├── requirements.txt
-├── LICENSE
-└── README.md
 ```
 
 ---
@@ -358,6 +371,21 @@ Guido van Rossum.
 
 ---
 
+# 🆕 Análise de Sites
+
+Analise qualquer site e descubra o que ele quer transmitir:
+
+```bash
+python core/site_analyzer.py https://openai.com
+```
+
+O módulo irá:
+1. Extrair o conteúdo textual do site via **Jina AI Reader** (API pública gratuita)
+2. Gerar um resumo completo via **Pollinations AI** (API pública gratuita)
+3. Explicar: mensagem principal, público-alvo, intenção e pontos-chave
+
+---
+
 # ❓ FAQ
 
 ### O projeto utiliza IA?
@@ -497,8 +525,4 @@ Caso queira contribuir com melhorias, correções ou novas funcionalidades, fiqu
 
 ---
 
-<p align="center">
-
 **⭐ Se este projeto foi útil para você, considere deixar uma estrela no repositório.**
-
-</p>
