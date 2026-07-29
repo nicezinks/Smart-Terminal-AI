@@ -76,7 +76,7 @@ class SmartTerminalUI:
 
 [bold yellow]Dica:[/bold yellow] Digite qualquer pergunta para pesquisar na web!
         """
-        self.console.print(Panel(help_text, border_style="cyan", title="❓ Ajuda", title_align="left"))
+        self.console.print(Panel(help_text, border_style="cyan", title=" Ajuda", title_align="left"))
 
     def _print_history(self) -> None:
         """Exibe histórico de pesquisas."""
@@ -96,7 +96,7 @@ class SmartTerminalUI:
         self.console.print(Panel(
             history_text,
             border_style="magenta",
-            title="📜 Histórico",
+            title=" Histórico",
             title_align="left"
         ))
 
@@ -155,7 +155,7 @@ internet em tempo real.
   • Rich (interface rica no terminal)
   • Prompt Toolkit (input interativo)
 
-[dim]Desenvolvido com ❤️ para facilitar suas pesquisas.[/dim]
+[dim]Desenvolvido com  para facilitar suas pesquisas.[/dim]
         """
         self.console.print(Panel(about_text, border_style="yellow", title="ℹ️ Sobre"))
 
@@ -164,7 +164,7 @@ internet em tempo real.
         cmd = command.lower().strip()
 
         if cmd in ("/sair", "/exit", "/quit"):
-            self.animations.show_info("Até logo! 👋")
+            self.animations.show_info("Até logo! ")
             self._running = False
             return False
 
@@ -186,7 +186,7 @@ internet em tempo real.
                 f"Válidas: {stats['valid_entries']}\n"
                 f"Expiradas: {stats['expired_entries']}",
                 border_style="blue",
-                title="💾 Cache"
+                title=" Cache"
             ))
 
         elif cmd == "/stats":
@@ -210,12 +210,12 @@ internet em tempo real.
 
         # Animação de análise
         steps = [
-            "🔍 Analisando pergunta...",
-            "🌐 Iniciando navegador headless...",
-            "📡 Pesquisando na web...",
-            "📄 Encontrando páginas relevantes...",
-            "✂️ Extraindo conteúdo...",
-            "🧠 Gerando resumo..."
+            " Analisando pergunta...",
+            " Iniciando navegador headless...",
+            " Pesquisando na web...",
+            " Encontrando páginas relevantes...",
+            " Extraindo conteúdo...",
+            " Gerando resumo..."
         ]
 
         self.animations.show_progress_steps(steps, step_duration=0.8)
