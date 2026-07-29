@@ -11,10 +11,10 @@ import pytest
 from core.cache import Cache
 
 class TestCache:
-    """Testes do sistema de cache."""
+ 
 
     def test_cache_set_and_get(self):
-        """Deve armazenar e recuperar dados do cache."""
+  
         with tempfile.TemporaryDirectory() as tmpdir:
             cache = Cache(cache_path=f"{tmpdir}/cache.json")
             cache.set("pergunta teste", {"response": "resposta teste"})
@@ -30,7 +30,7 @@ class TestCache:
             assert result is None
 
     def test_cache_clear(self):
-        """Limpar cache deve remover todas as entradas."""
+       
         with tempfile.TemporaryDirectory() as tmpdir:
             cache = Cache(cache_path=f"{tmpdir}/cache.json")
             cache.set("q1", {"r": "a"})
@@ -39,7 +39,7 @@ class TestCache:
             assert cache.stats()["total_entries"] == 0
 
     def test_cache_case_insensitive(self):
-        """Cache deve ser case-insensitive."""
+       
         with tempfile.TemporaryDirectory() as tmpdir:
             cache = Cache(cache_path=f"{tmpdir}/cache.json")
             cache.set("Python", {"r": "a"})
