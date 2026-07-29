@@ -1,7 +1,4 @@
-"""
-Sistema de Fontes Confiáveis.
-Filtra resultados de busca para priorizar domínios confiáveis.
-"""
+
 
 import json
 from pathlib import Path
