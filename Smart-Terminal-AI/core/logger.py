@@ -1,5 +1,5 @@
 """
-Sistema de logging — silencioso no console, salva apenas em arquivo.
+Sistema de logging 
 """
 
 import logging
@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Optional
 
 class Logger:
-    """Logger que salva em arquivo mas NUNCA mostra no console."""
+    
 
     _instance: Optional["Logger"] = None
     _logger: Optional[logging.Logger] = None
