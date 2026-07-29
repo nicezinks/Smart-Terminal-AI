@@ -1,3 +1,4 @@
+
 # 🤖 Smart Terminal AI
 
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -303,7 +304,7 @@ pip install -r requirements.txt
 Clone o projeto:
 
 ```bash
-git clone gh repo clone nicezinks/Smart-Terminal-AI
+git clone "gh repo clone nicezinks/Smart-Terminal-AI"
 ```
 
 Entre na pasta:
@@ -521,7 +522,8 @@ Consulte-o para conhecer todos os termos de utilização, distribuição e modif
 
 Projeto desenvolvido por um desenvolvedor independente com foco em Python, organização de código, arquitetura modular e projetos Open Source.
 
-Caso queira contribuir com melhorias, correções ou novas funcionalidades, fique à vontade para abrir uma **Issue** ou enviar um **Pull Request**.
+Caso queira contribuir com melhorias, correções ou novas funcionalidades, fique à vontade para abrir uma **Issue** ou enviar um **Pull Request**
+Desenvolvedor: **python_dev**
 
 ---
 
