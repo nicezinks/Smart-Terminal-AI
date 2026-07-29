@@ -1,5 +1,5 @@
 """
-Gerenciador de navegador headless com stealth anti-detecção.
+Gerenciador de navegador
 """
 
 import asyncio
@@ -10,8 +10,7 @@ from playwright.async_api import async_playwright, Browser, BrowserContext, Page
 from core.config import Config
 from core.logger import Logger
 
-class BrowserManager:
-    """Navegador headless com stealth anti-bot."""
+class BrowserManager
 
     def __init__(self) -> None:
         self.config = Config()
