@@ -1,26 +1,4 @@
-"""
-================================================================================
-🌐 Site Analyzer — Análise Inteligente de Links
-================================================================================
-Módulo independente que recebe um link de site, extrai seu conteúdo usando
-a API pública Jina AI Reader (gratuita, sem API key) e gera um resumo
-completo do que o site está transmitindo ao leitor.
 
-Como usar:
-    python -m core.site_analyzer https://exemplo.com
-
-Ou importar:
-    from core.site_analyzer import SiteAnalyzer
-    analyzer = SiteAnalyzer()
-    resultado = analyzer.analyze("https://exemplo.com")
-
-APIs utilizadas:
-• Jina AI Reader  → https://r.jina.ai/http://URL  (extração de texto)
-• Pollinations AI → https://text.pollinations.ai/  (resumo inteligente)
-
-Ambas são 100% gratuitas e não exigem cadastro ou API key.
-================================================================================
-"""
 
 import json
 import sys
