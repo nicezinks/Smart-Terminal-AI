@@ -1,7 +1,6 @@
 """
-Extrator de conteúdo web — até 1000 linhas.
+Extrator de conteúdo web 
 """
-
 import asyncio
 import re
 from typing import List, Dict, Any
