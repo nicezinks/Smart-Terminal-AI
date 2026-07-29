@@ -303,7 +303,7 @@ pip install -r requirements.txt
 Clone o projeto:
 
 ```bash
-git clone "gh repo clone nicezinks/Smart-Terminal-AI"
+git clone gh repo clone nicezinks/Smart-Terminal-AI
 ```
 
 Entre na pasta:
