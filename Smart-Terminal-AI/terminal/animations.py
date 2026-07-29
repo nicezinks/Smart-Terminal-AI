@@ -32,7 +32,7 @@ class TerminalAnimations:
         banner_text = """
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║              🤖 Smart Terminal AI Search 🤖                  ║
+║               Smart Terminal AI Search                       ║
 ║                                                              ║
 ║       Assistente inteligente de pesquisa web via terminal    ║
 ║                                                              ║
@@ -50,7 +50,7 @@ class TerminalAnimations:
             "[bold green]Bem-vindo![/bold green]\n"
             "[white]Digite sua pergunta abaixo ou use [bold]/ajuda[/bold] para ver os comandos.[/white]",
             border_style="green",
-            title="👋 Olá!",
+            title=" Olá!",
             title_align="left"
         ))
 
@@ -138,7 +138,7 @@ class TerminalAnimations:
         """Exibe a resposta da IA formatada."""
         console.print(Panel(
             response,
-            title="[bold green]🤖 Resposta da IA[/bold green]",
+            title="[bold green] Resposta da IA[/bold green]",
             border_style="green",
             padding=(1, 2)
         ))
