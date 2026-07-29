@@ -13,8 +13,7 @@ from core.logger import Logger
 from core.utils import truncate_text, current_timestamp
 
 class Summarizer:
-    """Motor de sumarização e geração de respostas."""
-
+    
     def __init__(self) -> None:
         self.config = Config()
         self.logger = Logger()
