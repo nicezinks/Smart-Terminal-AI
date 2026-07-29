@@ -1,5 +1,5 @@
 """
-Módulo de configuração global do Smart Terminal AI Search.
+configuração global.
 """
 
 import json
