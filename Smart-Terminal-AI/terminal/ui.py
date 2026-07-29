@@ -1,6 +1,5 @@
 """
-Interface do usuário principal do Smart Terminal AI Search.
-Orquestra a interação entre usuário e o assistente de IA.
+Interface do usuário principal
 """
 
 import asyncio
