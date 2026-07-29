@@ -1,6 +1,6 @@
 """
-Módulo de sumarização e geração de respostas do Smart Terminal AI Search.
-Processa informações extraídas e gera respostas naturais em português.
+Módulo de sumarização e geração de respostas.
+
 """
 
 import json
