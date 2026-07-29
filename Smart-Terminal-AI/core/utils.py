@@ -1,6 +1,6 @@
 """
-Utilitários diversos para o Smart Terminal AI Search.
-Funções auxiliares reutilizáveis em todo o projeto.
+Utilitários.
+
 """
 
 import hashlib
