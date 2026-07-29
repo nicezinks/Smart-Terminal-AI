@@ -157,7 +157,7 @@ internet em tempo real.
 
 [dim]Desenvolvido com  para facilitar suas pesquisas.[/dim]
         """
-        self.console.print(Panel(about_text, border_style="yellow", title="ℹ️ Sobre"))
+        self.console.print(Panel(about_text, border_style="yellow", title=" Sobre"))
 
     async def _process_command(self, command: str) -> bool:
         """Processa comandos especiais. Retorna False se deve continuar loop."""
