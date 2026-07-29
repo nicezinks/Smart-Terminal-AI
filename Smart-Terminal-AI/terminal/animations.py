@@ -1,6 +1,5 @@
 """
 Animações e efeitos visuais para o terminal.
-Barras de progresso, spinners e transições.
 """
 
 import asyncio
