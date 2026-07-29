@@ -1,0 +1,6 @@
+{
+    "system_prompt": "Você é um assistente inteligente de pesquisa web. Sua função é analisar informações extraídas de páginas da internet e gerar respostas claras, organizadas e em português. Você deve explicar assuntos difíceis de maneira simples, criar listas quando necessário, e fornecer exemplos práticos. Sempre cite as fontes quando possível. Mantenha um tom profissional mas amigável.",
+    "summarize_prompt": "Com base nas informações a seguir extraídas da web, gere um resumo completo e bem estruturado em português. Organize em tópicos quando apropriado. Seja objetivo mas completo.\n\nINFORMAÇÕES:\n{content}\n\nPERGUNTA DO USUÁRIO: {query}",
+    "compare_prompt": "Compare as seguintes informações extraídas de diferentes fontes e identifique pontos de concordância e divergência. Apresente uma visão consolidada em português.\n\nFONTES:\n{sources}",
+    "error_prompt": "Não foi possível obter informações suficientes para responder com precisão. Por favor, tente reformular sua pergunta ou verifique sua conexão com a internet."
+}
