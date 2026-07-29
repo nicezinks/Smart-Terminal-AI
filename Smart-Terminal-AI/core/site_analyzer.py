@@ -12,14 +12,7 @@ from core.utils import is_valid_url, clean_text, truncate_text
 
 
 class SiteAnalyzer:
-    """
-    Analisador inteligente de sites.
-
-    Extrai o conteúdo textual de qualquer URL e gera um resumo completo
-    explicando o que o site quer passar ao leitor, qual é sua mensagem
-    principal, público-alvo e intenção.
-    """
-
+    
     JINA_READER_URL = "https://r.jina.ai/http://{url}"
     POLLINATIONS_API = "https://text.pollinations.ai/"
 
@@ -27,9 +20,7 @@ class SiteAnalyzer:
         self.config = Config()
         self.logger = Logger()
 
-    # ------------------------------------------------------------------
-    # 1. Extração de conteúdo via Jina AI Reader (API pública gratuita)
-    # ------------------------------------------------------------------
+    
     def _fetch_content(self, url: str) -> Optional[str]:
         """
         Usa a Jina AI Reader para extrair o texto limpo de uma URL.
@@ -75,9 +66,7 @@ class SiteAnalyzer:
             self.logger.error(f"Erro ao extrair conteúdo: {e}")
             return None
 
-    # ------------------------------------------------------------------
-    # 2. Geração de resumo via Pollinations AI (API pública gratuita)
-    # ------------------------------------------------------------------
+   
     def _generate_summary(self, content: str, url: str) -> str:
         """
         Usa a Pollinations AI para gerar um resumo inteligente e completo
@@ -178,9 +167,7 @@ Acima está o conteúdo bruto extraído do site.
 """
         return summary
 
-    # ------------------------------------------------------------------
-    # 3. Interface pública
-    # ------------------------------------------------------------------
+   
     def analyze(self, url: str) -> Dict[str, Any]:
         """
         Analisa um site completo: extrai conteúdo e gera resumo.
@@ -256,9 +243,7 @@ Acima está o conteúdo bruto extraído do site.
             print()
 
 
-# ==============================================================================
-# CLI — Uso direto pela linha de comando
-# ==============================================================================
+
 def main() -> None:
     """
     Ponto de entrada para uso via linha de comando.
