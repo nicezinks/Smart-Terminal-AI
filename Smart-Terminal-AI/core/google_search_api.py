@@ -9,8 +9,7 @@ from core.config import Config
 from core.logger import Logger
 
 class GoogleSearchAPI:
-    """Cliente para a API oficial Google Custom Search JSON."""
-
+   
     API_URL = "https://www.googleapis.com/customsearch/v1"
 
     def __init__(self) -> None:
@@ -21,7 +20,7 @@ class GoogleSearchAPI:
         self.enabled = bool(self.api_key and self.cx and self.api_key.strip() and self.cx.strip())
 
     def search(self, query: str, num_results: int = 10) -> List[Dict[str, str]]:
-        """Busca via API oficial do Google. Retorna lista de resultados."""
+       
         if not self.enabled:
             self.logger.info("API Google Custom Search não configurada. Pulando.")
             return []
