@@ -30,7 +30,7 @@ class AIAssistant:
             if not results:
                 return {
                     "query": query,
-                    "response": "❌ Nao encontrei resultados. Tente reformular a pergunta.",
+                    "response": " Nao encontrei resultados. Tente reformular a pergunta.",
                     "links": [],
                     "duration": time.time() - start,
                     "from_cache": False,
@@ -56,7 +56,7 @@ class AIAssistant:
         except Exception as e:
             return {
                 "query": query,
-                "response": f"❌ Erro: {e}",
+                "response": f" Erro: {e}",
                 "links": [],
                 "duration": time.time() - start,
                 "from_cache": False,
