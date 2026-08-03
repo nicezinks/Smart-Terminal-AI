@@ -21,8 +21,7 @@ def main() -> None:
         sys.exit(1)
     except Exception as e:
         print(f" Erro fatal: {e}")
-        print(f"
-    Detalhes: {type(e).__name__}")
+        print(f"Detalhes: {type(e).__name__}")
         import traceback
         traceback.print_exc()
         sys.exit(1)
