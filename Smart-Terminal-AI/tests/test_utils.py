@@ -1,6 +1,3 @@
-"""
-Testes para o módulo de utilitários.
-"""
 
 import pytest
 from core.utils import (
