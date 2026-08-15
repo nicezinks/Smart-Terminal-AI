@@ -13,7 +13,6 @@ class SearchResult:
     def to_dict(self): return {"title": self.title, "url": self.url, "snippet": self.snippet}
 
 def _load_trusted_domains() -> set:
-    """Carrega domínios confiáveis."""
     base = Path(__file__).resolve().parent.parent
     fpath = base / "trusted_sources.json"
     domains = set()
@@ -34,13 +33,6 @@ def _load_trusted_domains() -> set:
     return domains
 
 def _url_alive(url: str) -> bool:
-    """
-    Verifica se URL está no ar e respondendo corretamente.
-
-    Tenta primeiro com HEAD (mais rápido), se falhar tenta GET.
-    Aceita status 200-399 (inclui redirecionamentos válidos).
-    Timeout curto para não travar a busca.
-    """
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -50,7 +42,6 @@ def _url_alive(url: str) -> bool:
         "Connection": "keep-alive",
     }
 
-    # Tenta HEAD primeiro (mais leve)
     try:
         r = requests.head(url, timeout=5, allow_redirects=True, headers=headers)
         if 200 <= r.status_code < 400:
@@ -58,10 +49,9 @@ def _url_alive(url: str) -> bool:
     except Exception:
         pass
 
-    # Se HEAD falhar, tenta GET (alguns servidores bloqueiam HEAD)
+
     try:
         r = requests.get(url, timeout=8, allow_redirects=True, headers=headers, stream=True)
-        # Lê só os primeiros bytes pra confirmar que não é página de erro
         _ = r.raw.read(1024)
         r.close()
         if 200 <= r.status_code < 400:
@@ -72,11 +62,10 @@ def _url_alive(url: str) -> bool:
     return False
 
 def search_duckduckgo(query: str, max_results: int = 10) -> List[SearchResult]:
-    """Busca no DDGS, filtra links mortos, prioriza fontes confiáveis."""
     trusted = _load_trusted_domains()
     raw_results: List[SearchResult] = []
 
-    # Busca normal
+
     try:
         with DDGS() as ddgs:
             for r in ddgs.text(query, max_results=20):
@@ -88,7 +77,6 @@ def search_duckduckgo(query: str, max_results: int = 10) -> List[SearchResult]:
     except Exception:
         return []
 
-    # Separa: confiáveis primeiro, depois outros
     trusted_results = []
     other_results = []
     for r in raw_results:
@@ -100,7 +88,6 @@ def search_duckduckgo(query: str, max_results: int = 10) -> List[SearchResult]:
 
     ordered = trusted_results + other_results
 
-    # Filtra links mortos — verifica até max_results * 3 pra ter margem
     alive = []
     checked = 0
     max_checks = max_results * 3
