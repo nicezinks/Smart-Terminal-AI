@@ -1,5 +1,5 @@
 
-# 🤖 Smart Terminal AI
+#  Smart Terminal AI
 
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-success?style=for-the-badge)
@@ -8,7 +8,7 @@
 
 ---
 
-# 📖 Sobre
+#  Sobre
 
 **Smart Terminal AI** é um assistente de terminal desenvolvido em Python com foco em responder perguntas simples do dia a dia utilizando pesquisa na web, cache local, histórico, gerenciamento de configurações e uma interface moderna para terminal.
 
@@ -26,7 +26,7 @@ Ele **não foi criado** para:
 
 
 
-# 📂 Estrutura
+#  Estrutura
 
 ```text
 Smart-Terminal-AI/
@@ -66,7 +66,7 @@ Smart-Terminal-AI/
 
 ---
 
-# ⚙ Funcionamento
+# Funcionamento
 
 Fluxo geral:
 
@@ -106,7 +106,7 @@ Resposta Final
 
 
 
-# 🤝 Contribuindo
+# Contribuindo
 
 Contribuições são bem-vindas.
 
@@ -124,7 +124,7 @@ Contribuições são bem-vindas.
 
 ---
 
-# 🔒 Segurança
+#  Segurança
 
 Boas práticas:
 
@@ -138,7 +138,7 @@ Caso encontre algum problema de segurança, abra uma **Issue** descrevendo o oco
 
 ---
 
-# ⚠ Limitações
+#  Limitações
 
 Este projeto possui algumas limitações por projeto e escopo:
 
@@ -150,7 +150,7 @@ Este projeto possui algumas limitações por projeto e escopo:
 
 ---
 
-# 📜 Aviso Legal (Disclaimer)
+#  Aviso
 
 Este software foi desenvolvido exclusivamente para fins educacionais, aprendizado e demonstração técnica.
 
