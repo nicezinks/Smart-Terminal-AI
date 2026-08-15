@@ -136,7 +136,6 @@ class SiteAnalyzer:
             return self._fallback_summary(content, url)
 
     def _fallback_summary(self, content: str, url: str) -> str:
-        """Resumo básico caso a API de IA falhe."""
         lines = content.split("\n")
         title = lines[0] if lines else "Sem título"
         paragraphs = [l for l in lines[1:] if len(l.strip()) > 50][:5]
@@ -157,15 +156,6 @@ Acima está o conteúdo bruto extraído do site.
 
    
     def analyze(self, url: str) -> Dict[str, Any]:
-        """
-        Analisa um site completo: extrai conteúdo e gera resumo.
-
-        Args:
-            url: Endereço do site a ser analisado
-
-        Returns:
-            Dict com: url, title, content_length, summary, success
-        """
         if not is_valid_url(url):
             return {
                 "url": url,
@@ -208,12 +198,8 @@ Acima está o conteúdo bruto extraído do site.
         }
 
     def print_analysis(self, url: str) -> None:
-        """
-        Analisa um site e imprime o resultado formatado no terminal.
-        Método conveniente para uso via linha de comando.
-        """
         print(f"\n{'═' * 70}")
-        print(f"  🔗 Analisando: {url}")
+        print(f"   Analisando: {url}")
         print(f"{'═' * 70}\n")
 
         result = self.analyze(url)
@@ -232,32 +218,24 @@ Acima está o conteúdo bruto extraído do site.
 
 
 def main() -> None:
-    """
-    Ponto de entrada para uso via linha de comando.
-
-    Exemplos:
-        python core/site_analyzer.py https://openai.com
-        python core/site_analyzer.py https://g1.globo.com
-        python -m core.site_analyzer https://exemplo.com
-    """
     if len(sys.argv) < 2:
         print("""
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                    🌐 SMART TERMINAL AI — SITE ANALYZER                      ║
+║                     SMART TERMINAL AI — SITE ANALYZER                        ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
 ║                                                                              ║
-║  Uso:  python core/site_analyzer.py <URL>                                  ║
+║  Uso:  python core/site_analyzer.py <URL>                                    ║
 ║                                                                              ║
 ║  Exemplos:                                                                   ║
-║    python core/site_analyzer.py https://openai.com                          ║
-║    python core/site_analyzer.py https://g1.globo.com                       ║
-║    python core/site_analyzer.py https://www.bbc.com/news                   ║
+║    python core/site_analyzer.py https://openai.com                           ║
+║    python core/site_analyzer.py https://g1.globo.com                         ║
+║    python core/site_analyzer.py https://www.bbc.com/news                     ║
 ║                                                                              ║
 ║  Descrição:                                                                  ║
-║    Este módulo analisa qualquer site e gera um resumo completo explicando  ║
+║    Este módulo analisa qualquer site e gera um resumo completo explicando    ║
 ║    o que o site quer transmitir ao leitor. Usa APIs públicas gratuitas:      ║
-║    • Jina AI Reader  → extração de texto                                   ║
-║    • Pollinations AI → resumo inteligente                                  ║
+║    • Jina AI Reader  → extração de texto                                     ║
+║    • Pollinations AI → resumo inteligente                                    ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
         """)
