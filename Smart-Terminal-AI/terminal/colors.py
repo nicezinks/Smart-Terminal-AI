@@ -1,15 +1,11 @@
-"""
-Definições de cores e estilos para o terminal.
-"""
 
 from colorama import Fore, Back, Style, init
 
-# Inicializa colorama
+
 init(autoreset=True)
 
 class Colors:
-   
-    # Cores principais
+
     PRIMARY = Fore.CYAN
     SECONDARY = Fore.MAGENTA
     SUCCESS = Fore.GREEN
@@ -19,20 +15,19 @@ class Colors:
     MUTED = Fore.LIGHTBLACK_EX
     WHITE = Fore.WHITE
 
-    # Fundos
+ 
     BG_PRIMARY = Back.CYAN
     BG_SUCCESS = Back.GREEN
     BG_ERROR = Back.RED
     BG_WARNING = Back.YELLOW
 
-    # Estilos
+
     BOLD = Style.BRIGHT
     DIM = Style.DIM
     RESET = Style.RESET_ALL
 
     @classmethod
     def colorize(cls, text: str, color: str) -> str:
-        """Aplica cor a um texto."""
         return f"{color}{text}{cls.RESET}"
 
     @classmethod
