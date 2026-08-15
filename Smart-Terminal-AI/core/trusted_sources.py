@@ -9,7 +9,6 @@ from core.config import Config
 from core.logger import Logger
 
 class TrustedSourceManager:
-    """Gerencia domínios confiáveis e filtra resultados de busca."""
 
     def __init__(self) -> None:
         self.config = Config()
@@ -18,7 +17,6 @@ class TrustedSourceManager:
         self._load_domains()
 
     def _load_domains(self) -> None:
-        """Extrai domínios do trusted_sources.json."""
         base = Path(__file__).resolve().parent.parent
         sources_file = base / "trusted_sources.json"
 
@@ -37,15 +35,13 @@ class TrustedSourceManager:
                         domain = parsed.netloc.replace("www.", "")
                         if domain:
                             self._domains.add(domain)
-                            # Também adiciona com www
                             self._domains.add("www." + domain)
 
             self.logger.info(f"{len(self._domains)} domínios confiáveis carregados")
         except Exception:
             pass
 
-    def is_trusted(self, url: str) -> bool:
-        """Verifica se uma URL pertence a um domínio confiável."""
+    def is_trusted(self, url: str) -> boold
         try:
             parsed = urlparse(url)
             domain = parsed.netloc.replace("www.", "")
@@ -54,13 +50,11 @@ class TrustedSourceManager:
             return False
 
     def score_result(self, url: str) -> int:
-        """Retorna score de confiança (mais alto = mais confiável)."""
         if self.is_trusted(url):
             return 100
         return 0
 
     def filter_and_sort(self, results: List[Dict]) -> List[Dict]:
-        """Reordena resultados colocando fontes confiáveis primeiro."""
         scored = []
         for r in results:
             url = r.get("url", "")
