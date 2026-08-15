@@ -24,7 +24,6 @@ class TerminalAnimations:
         self._current_task = ""
 
     def show_banner(self) -> None:
-        """Exibe o banner principal do aplicativo."""
         banner_text = """
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
