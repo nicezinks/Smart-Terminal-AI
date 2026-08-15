@@ -1,6 +1,4 @@
-"""
-Gerenciador de navegador
-"""
+
 
 import asyncio
 from typing import Optional, Any, Dict
@@ -71,7 +69,7 @@ class BrowserManager
                 }
             )
 
-            # Stealth script completo
+            
             await self._context.add_init_script("""
                 // Esconde webdriver
                 Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
