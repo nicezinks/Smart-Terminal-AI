@@ -1,6 +1,4 @@
-"""
-Extrator de conteúdo web 
-"""
+
 import asyncio
 import re
 from typing import List, Dict, Any
@@ -85,7 +83,6 @@ class WebScraper:
             await asyncio.sleep(1.0)
             html = await browser.get_content()
 
-            # CORREÇÃO: trata None do document.title
             raw_title = await browser.evaluate("document.title")
             title = raw_title if raw_title else "Sem título"
 
