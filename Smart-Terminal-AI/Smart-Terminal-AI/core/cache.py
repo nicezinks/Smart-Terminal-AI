@@ -1,6 +1,4 @@
-"""
-Cache inteligente com TTL.
-"""
+
 
 import json
 from datetime import datetime, timedelta
