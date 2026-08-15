@@ -1,7 +1,3 @@
-"""
-Módulo de sumarização e geração de respostas.
-
-"""
 
 import json
 import re
