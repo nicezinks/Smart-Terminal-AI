@@ -1,6 +1,4 @@
-"""
-Histórico de pesquisas.
-"""
+
 
 import json
 from datetime import datetime
