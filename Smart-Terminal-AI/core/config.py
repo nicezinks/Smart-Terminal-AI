@@ -1,6 +1,3 @@
-"""
-configuração global.
-"""
 
 import json
 from pathlib import Path
@@ -66,7 +63,6 @@ DEFAULT_CONFIG: Dict[str, Any] = {
 }
 
 class Config:
-    """Gerenciador centralizado de configurações."""
 
     _instance: Optional["Config"] = None
     _config_data: Dict[str, Any] = {}
