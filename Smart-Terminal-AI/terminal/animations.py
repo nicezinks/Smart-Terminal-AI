@@ -1,7 +1,3 @@
-"""
-Animações e efeitos visuais para o terminal.
-"""
-
 import asyncio
 import itertools
 import sys
@@ -18,7 +14,7 @@ from terminal.colors import Colors
 console = Console()
 
 class TerminalAnimations:
-    """Gerenciador de animações do terminal."""
+
 
     SPINNER_FRAMES = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
     DOTS_FRAMES = [" ", ". ", ".. ", "..."]
@@ -45,7 +41,7 @@ class TerminalAnimations:
         ))
 
     def show_welcome(self) -> None:
-        """Exibe mensagem de boas-vindas."""
+       
         console.print(Panel(
             "[bold green]Bem-vindo![/bold green]\n"
             "[white]Digite sua pergunta abaixo ou use [bold]/ajuda[/bold] para ver os comandos.[/white]",
@@ -55,12 +51,12 @@ class TerminalAnimations:
         ))
 
     def show_spinner(self, message: str, duration: float = 2.0) -> None:
-        """Exibe um spinner com mensagem por um tempo determinado."""
+ 
         with console.status(f"[cyan]{message}[/cyan]", spinner="dots"):
             time.sleep(duration)
 
     def show_progress_steps(self, steps: List[str], step_duration: float = 1.5) -> None:
-        """Exibe progresso visual de múltiplas etapas."""
+
         with Progress(
             SpinnerColumn(),
             TextColumn("[progress.description]{task.description}"),
@@ -76,34 +72,34 @@ class TerminalAnimations:
                 progress.advance(task)
 
     def show_typing_effect(self, text: str, delay: float = 0.01) -> None:
-        """Simula efeito de digitação no terminal."""
+   
         for char in text:
             console.print(char, end="")
             time.sleep(delay)
         console.print()
 
     def show_separator(self, char: str = "═", length: int = 60) -> None:
-        """Exibe uma linha separadora decorativa."""
+   
         console.print(f"[cyan]{char * length}[/cyan]")
 
     def show_success(self, message: str) -> None:
-        """Exibe mensagem de sucesso."""
+
         console.print(f"[bold green]✓[/bold green] {message}")
 
     def show_error(self, message: str) -> None:
-        """Exibe mensagem de erro."""
+     
         console.print(f"[bold red]✗[/bold red] {message}")
 
     def show_info(self, message: str) -> None:
-        """Exibe mensagem informativa."""
+ 
         console.print(f"[bold blue]ℹ[/bold blue] {message}")
 
     def show_warning(self, message: str) -> None:
-        """Exibe mensagem de aviso."""
+       
         console.print(f"[bold yellow]⚠[/bold yellow] {message}")
 
     def show_panel(self, title: str, content: str, style: str = "cyan") -> None:
-        """Exibe conteúdo em um painel decorativo."""
+
         console.print(Panel(
             content,
             title=f"[bold]{title}[/bold]",
@@ -112,11 +108,11 @@ class TerminalAnimations:
         ))
 
     def show_link_list(self, links: List[dict]) -> None:
-        """Exibe lista de links formatada."""
+        
         if not links:
             return
 
-        console.print("\n[bold cyan]📚 Você deseja saber mais?[/bold cyan]\n")
+        console.print("\n[bold cyan] Você deseja saber mais?[/bold cyan]\n")
         for i, link in enumerate(links, 1):
             title = link.get("title", "Sem título")
             url = link.get("url", "")
@@ -135,7 +131,7 @@ class TerminalAnimations:
             ))
 
     def show_response(self, response: str) -> None:
-        """Exibe a resposta da IA formatada."""
+ 
         console.print(Panel(
             response,
             title="[bold green] Resposta da IA[/bold green]",
@@ -144,10 +140,10 @@ class TerminalAnimations:
         ))
 
     def show_stats(self, duration: float, sources: int, from_cache: bool = False) -> None:
-        """Exibe estatísticas da pesquisa."""
+      
         cache_status = "[yellow](do cache)[/yellow]" if from_cache else ""
         stats_text = (
-            f"⏱ Tempo: [bold]{duration:.1f}s[/bold] {cache_status} | "
-            f"📄 Fontes: [bold]{sources}[/bold]"
+            f" Tempo: [bold]{duration:.1f}s[/bold] {cache_status} | "
+            f" Fontes: [bold]{sources}[/bold]"
         )
         console.print(f"\n[dim]{stats_text}[/dim]\n")
