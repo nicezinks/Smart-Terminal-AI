@@ -1,0 +1,122 @@
+{
+    "noticias_mundiais": [
+        {"name": "BBC News", "url": "https://www.bbc.com/news"},
+        {"name": "Reuters", "url": "https://www.reuters.com"},
+        {"name": "Associated Press", "url": "https://apnews.com"},
+        {"name": "CNN", "url": "https://edition.cnn.com"},
+        {"name": "The New York Times", "url": "https://www.nytimes.com"},
+        {"name": "The Washington Post", "url": "https://www.washingtonpost.com"},
+        {"name": "The Guardian", "url": "https://www.theguardian.com"},
+        {"name": "Al Jazeera", "url": "https://www.aljazeera.com"},
+        {"name": "ABC News", "url": "https://abcnews.go.com"},
+        {"name": "NBC News", "url": "https://www.nbcnews.com"},
+        {"name": "CBS News", "url": "https://www.cbsnews.com"},
+        {"name": "USA Today", "url": "https://www.usatoday.com"},
+        {"name": "Sky News", "url": "https://news.sky.com"},
+        {"name": "Euronews", "url": "https://www.euronews.com"},
+        {"name": "Deutsche Welle", "url": "https://www.dw.com"},
+        {"name": "France 24", "url": "https://www.france24.com"},
+        {"name": "The Independent", "url": "https://www.independent.co.uk"},
+        {"name": "The Telegraph", "url": "https://www.telegraph.co.uk"},
+        {"name": "Axios", "url": "https://www.axios.com"},
+        {"name": "Newsweek", "url": "https://www.newsweek.com"}
+    ],
+    "noticias_brasil": [
+        {"name": "G1", "url": "https://g1.globo.com"},
+        {"name": "UOL Notícias", "url": "https://noticias.uol.com.br"},
+        {"name": "CNN Brasil", "url": "https://www.cnnbrasil.com.br"},
+        {"name": "Estadão", "url": "https://www.estadao.com.br"},
+        {"name": "Folha de S.Paulo", "url": "https://www.folha.uol.com.br"},
+        {"name": "O Globo", "url": "https://oglobo.globo.com"},
+        {"name": "Poder360", "url": "https://www.poder360.com.br"},
+        {"name": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br"},
+        {"name": "Terra Notícias", "url": "https://www.terra.com.br/noticias"},
+        {"name": "R7 Notícias", "url": "https://noticias.r7.com"},
+        {"name": "Valor Econômico", "url": "https://valor.globo.com"},
+        {"name": "Exame", "url": "https://exame.com"},
+        {"name": "Gazeta do Povo", "url": "https://www.gazetadopovo.com.br"},
+        {"name": "Correio Braziliense", "url": "https://www.correiobraziliense.com.br"},
+        {"name": "Veja", "url": "https://veja.abril.com.br"}
+    ],
+    "tecnologia": [
+        {"name": "TechCrunch", "url": "https://techcrunch.com"},
+        {"name": "The Verge", "url": "https://www.theverge.com"},
+        {"name": "Ars Technica", "url": "https://arstechnica.com"},
+        {"name": "Wired", "url": "https://www.wired.com"},
+        {"name": "Tom's Hardware", "url": "https://www.tomshardware.com"},
+        {"name": "AnandTech", "url": "https://www.anandtech.com"},
+        {"name": "XDA Developers", "url": "https://www.xda-developers.com"},
+        {"name": "ZDNet", "url": "https://www.zdnet.com"},
+        {"name": "CNET", "url": "https://www.cnet.com"},
+        {"name": "PCMag", "url": "https://www.pcmag.com"},
+        {"name": "Digital Trends", "url": "https://www.digitaltrends.com"},
+        {"name": "How-To Geek", "url": "https://www.howtogeek.com"},
+        {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com"},
+        {"name": "Gizmodo", "url": "https://gizmodo.com"},
+        {"name": "Engadget", "url": "https://www.engadget.com"}
+    ],
+    "inteligencia_artificial": [
+        {"name": "OpenAI Blog", "url": "https://openai.com/blog"},
+        {"name": "Anthropic News", "url": "https://www.anthropic.com/news"},
+        {"name": "Google AI Blog", "url": "https://ai.googleblog.com"},
+        {"name": "Hugging Face Blog", "url": "https://huggingface.co/blog"},
+        {"name": "Microsoft AI Blog", "url": "https://blogs.microsoft.com/ai"},
+        {"name": "DeepMind Blog", "url": "https://deepmind.google/discover/blog"},
+        {"name": "AI News", "url": "https://www.artificialintelligence-news.com"},
+        {"name": "Towards AI", "url": "https://towardsai.net"},
+        {"name": "MIT AI News", "url": "https://news.mit.edu/topic/artificial-intelligence2"},
+        {"name": "NVIDIA AI Blog", "url": "https://blogs.nvidia.com/blog/category/ai"}
+    ],
+    "ciencia": [
+        {"name": "Nature", "url": "https://www.nature.com"},
+        {"name": "Science", "url": "https://www.science.org"},
+        {"name": "Scientific American", "url": "https://www.scientificamerican.com"},
+        {"name": "New Scientist", "url": "https://www.newscientist.com"},
+        {"name": "Live Science", "url": "https://www.livescience.com"},
+        {"name": "Phys.org", "url": "https://phys.org"},
+        {"name": "National Geographic", "url": "https://www.nationalgeographic.com"},
+        {"name": "Discover Magazine", "url": "https://www.discovermagazine.com"},
+        {"name": "Smithsonian Magazine", "url": "https://www.smithsonianmag.com"},
+        {"name": "Quanta Magazine", "url": "https://www.quantamagazine.org"}
+    ],
+    "espaco": [
+        {"name": "NASA", "url": "https://www.nasa.gov"},
+        {"name": "ESA", "url": "https://www.esa.int"},
+        {"name": "Space.com", "url": "https://www.space.com"},
+        {"name": "Universe Today", "url": "https://www.universetoday.com"},
+        {"name": "SpaceNews", "url": "https://spacenews.com"}
+    ],
+    "economia": [
+        {"name": "Bloomberg", "url": "https://www.bloomberg.com"},
+        {"name": "Financial Times", "url": "https://www.ft.com"},
+        {"name": "CNBC", "url": "https://www.cnbc.com"},
+        {"name": "Forbes", "url": "https://www.forbes.com"},
+        {"name": "Investopedia", "url": "https://www.investopedia.com"},
+        {"name": "MarketWatch", "url": "https://www.marketwatch.com"},
+        {"name": "Yahoo Finance", "url": "https://finance.yahoo.com"},
+        {"name": "Trading Economics", "url": "https://tradingeconomics.com"},
+        {"name": "The Economist", "url": "https://www.economist.com"},
+        {"name": "Fortune", "url": "https://fortune.com"}
+    ],
+    "games": [
+        {"name": "IGN", "url": "https://www.ign.com"},
+        {"name": "GameSpot", "url": "https://www.gamespot.com"},
+        {"name": "Polygon", "url": "https://www.polygon.com"},
+        {"name": "PC Gamer", "url": "https://www.pcgamer.com"},
+        {"name": "Eurogamer", "url": "https://www.eurogamer.net"}
+    ],
+    "seguranca_digital": [
+        {"name": "Krebs on Security", "url": "https://krebsonsecurity.com"},
+        {"name": "The Hacker News", "url": "https://thehackernews.com"},
+        {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com"},
+        {"name": "SecurityWeek", "url": "https://www.securityweek.com"},
+        {"name": "Dark Reading", "url": "https://www.darkreading.com"}
+    ],
+    "comunidades": [
+        {"name": "Reddit", "url": "https://www.reddit.com"},
+        {"name": "Hacker News", "url": "https://news.ycombinator.com"},
+        {"name": "GitHub Trending", "url": "https://github.com/trending"},
+        {"name": "Product Hunt", "url": "https://www.producthunt.com"},
+        {"name": "Stack Overflow Blog", "url": "https://stackoverflow.blog"}
+    ]
+}

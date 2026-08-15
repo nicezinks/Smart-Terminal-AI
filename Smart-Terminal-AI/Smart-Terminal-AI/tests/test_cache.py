@@ -1,0 +1,47 @@
+"""
+Testes para o sistema de cache.
+"""
+
+import json
+import tempfile
+from pathlib import Path
+
+import pytest
+
+from core.cache import Cache
+
+class TestCache:
+ 
+
+    def test_cache_set_and_get(self):
+  
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cache = Cache(cache_path=f"{tmpdir}/cache.json")
+            cache.set("pergunta teste", {"response": "resposta teste"})
+            result = cache.get("pergunta teste")
+            assert result is not None
+            assert result["response"] == "resposta teste"
+
+    def test_cache_miss(self):
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cache = Cache(cache_path=f"{tmpdir}/cache.json")
+            result = cache.get("query inexistente")
+            assert result is None
+
+    def test_cache_clear(self):
+       
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cache = Cache(cache_path=f"{tmpdir}/cache.json")
+            cache.set("q1", {"r": "a"})
+            cache.clear()
+            assert cache.get("q1") is None
+            assert cache.stats()["total_entries"] == 0
+
+    def test_cache_case_insensitive(self):
+       
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cache = Cache(cache_path=f"{tmpdir}/cache.json")
+            cache.set("Python", {"r": "a"})
+            assert cache.get("python") is not None
+            assert cache.get("PYTHON") is not None
