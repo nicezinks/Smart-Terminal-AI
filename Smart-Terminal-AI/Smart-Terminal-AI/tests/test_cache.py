@@ -1,6 +1,4 @@
-"""
-Testes para o sistema de cache.
-"""
+
 
 import json
 import tempfile
