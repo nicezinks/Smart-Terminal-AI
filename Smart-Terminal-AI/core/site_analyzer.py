@@ -63,7 +63,6 @@ class SiteAnalyzer:
    
     def _generate_summary(self, content: str, url: str) -> str:
     
-        # Trunca o conteúdo para não exceder limites da API
         truncated = truncate_text(content, 8000)
 
         prompt = (
@@ -135,7 +134,6 @@ class SiteAnalyzer:
 
         except Exception as e:
             self.logger.error(f"Erro ao gerar resumo: {e}")
-            # Fallback: retorna um resumo básico baseado no conteúdo
             return self._fallback_summary(content, url)
 
     def _fallback_summary(self, content: str, url: str) -> str:
@@ -196,8 +194,7 @@ Acima está o conteúdo bruto extraído do site.
                 ),
                 "success": False
             }
-
-        # Extrai título (primeira linha do conteúdo Jina geralmente é o título)
+            
         lines = content.split("\n")
         title = lines[0].strip() if lines else "Sem título"
 
