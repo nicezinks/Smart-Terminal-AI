@@ -1,6 +1,3 @@
-"""
-Testes para o sistema de histórico.
-"""
 
 import tempfile
 
@@ -12,7 +9,6 @@ class TestHistory:
    
 
     def test_history_add(self):
-        """Deve adicionar entrada ao histórico."""
         with tempfile.TemporaryDirectory() as tmpdir:
             hist = History(history_path=f"{tmpdir}/history.json")
             hist.add("pergunta", "resposta", [], 1.5, 3)
