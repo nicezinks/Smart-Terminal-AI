@@ -1,7 +1,3 @@
-"""
-Interface do usuário principal
-"""
-
 import asyncio
 import sys
 import time
